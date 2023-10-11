@@ -75,7 +75,7 @@
                       {%- endif -%}
 
                       <div class="megamenu__col-title">
-                        <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</a>
+                        <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title | replace: '<img src=' , '<img data-class="LazyLoad" data-src=' }}</a>
                       </div>
 
                       {%- liquid

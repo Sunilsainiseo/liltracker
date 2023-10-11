@@ -28,7 +28,7 @@
             {%- when 'liquid' -%}
               {%- if block.settings.code != blank -%}
                 <div class="rte">
-                  {{ block.settings.code }}
+                  {{ block.settings.code | replace: '<img src=' , '<img data-class="LazyLoad" data-src=' }}
                 </div>
               {%- else -%}
                 <div class="rte">
@@ -49,7 +49,7 @@
                       assign loading = true
                     endif
                   -%}
-                  {%- render 'image-element',
+                  {%- render 'image-element-2',
                     img: block.settings.image,
                     loading: loading,
                     sizeVariable: block.settings.width,

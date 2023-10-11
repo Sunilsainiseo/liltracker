@@ -10,6 +10,6 @@
   {%- render 'tab', id: id, title: title, content: description -%}
 {%- else -%}
   <div class="rte">
-    {{ description }}
+    {{ description | replace: '<iframe' , '<iframelazy data-class="LazyLoad"' | replace: '</iframe' , '</iframelazy' | replace: ' src="https://www.youtube.com/' , ' data-src="https://www.youtube.com/' }}
   </div>
 {%- endif -%}

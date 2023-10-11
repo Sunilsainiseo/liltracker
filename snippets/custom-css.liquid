@@ -1,0 +1,37 @@
+<style>
+.hero .slideshow__slide .hero__image-wrapper,
+.announcement-slider__content,
+.hero .slideshow__slide .hero__animation-contents {
+    opacity: 1!important;
+    transform: none!important;
+}
+html, body, .transition-body,
+.hero .slideshow__slide:not(.animate-out) .hero__image,
+.grid__image-ratio img,
+.product__photos img,
+image-element img,
+.hero .slideshow__slide .hero__link .btn {
+    opacity: 1!important;
+}
+.loading {
+    animation: none !important;
+}
+.product__main-photos .product-slideshow:not(.flickity-enabled) .product-main-slide.starting-slide {
+    display: block;
+}
+
+.product__main-photos .product-slideshow:not(.flickity-enabled) .product-main-slide.secondary-slide {
+    display: none;
+}
+.product__main-photos .product-slideshow .flickity-viewport {
+    min-height: 36vw!important;
+}
+@media only screen and (max-width: 768px){
+.product__main-photos .product-slideshow:not(.flickity-enabled) .product-main-slide {
+    width: 75%;
+}
+.product__main-photos .product-slideshow:not(.flickity-enabled) {
+    justify-content: center;
+    display: flex;
+}}
+</style>
